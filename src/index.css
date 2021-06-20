@@ -11,3 +11,242 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root {
+  --accent_color:  rgb(184, 168, 194);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 100%;
+ 
+}
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  background-image: url("images/the\ real\ background.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+}
+
+/* slightly unconventional header for stylistic purpose as well to show off clickable scroll links in nav */
+header {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  /* position: relative; */
+  padding: 20px;
+  height: 100%;
+  /* width: 100%; */
+}
+ h1 {
+  font-size: xx-large;
+  margin-top: 20px;
+  position: fixed; 
+  overflow: auto;
+
+  
+}
+
+nav {
+ height: 100%;
+  padding-top: 3%;
+}
+ul {
+  list-style-type: none;
+  text-decoration: none;
+  width: 25%;
+  height: 100%;
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+
+}
+ul li {
+margin-bottom: 2.5em;
+text-decoration: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color:black;
+}
+/* my entire main is a flex box container to best align my content down the center of the page */
+
+.Body-Container {
+  display: flex;
+   max-width: 33.3%;
+   margin-left: 33.3%;
+ 
+}
+
+#mypic {
+   border-style: solid;
+   padding: 5%;
+   min-height: 10%;
+   width: 33.3%;
+   margin: auto;
+   border-color: var(--accent_color);
+  content: url(images/me_irl_in_shades.jpg);
+}
+
+h2 {
+   min-width: 33.3%;
+   text-align: center;
+   font-size: x-large;
+   padding-bottom: 10%;
+}
+section p {
+   text-align: justify;
+   margin: 0 5%;
+}
+section h3 {
+   text-align: center;
+   /* display: none; */
+}
+a {
+   text-decoration: none;
+   color: black;
+}
+
+.large_project_slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-color: var(--accent_color);
+  min-height: 20em;
+  width: 40em;
+  margin-bottom: 5%;
+  background-image: url(https://cdn130.picsart.com/269868497006201.png?type=webp&to=min&r=640);
+/* I did try to condence these hover elements by assigning a secondary class to my divs, it was unsuccessful so it is still seperated out. i chose this filler image because the screen captures were not aesthetically pleasing at all */
+}
+.large_project_slot:hover {
+  background-image: url(images/writersblock.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.large_project_slot:hover h3{
+  display: none;
+}
+
+#small_project_container {
+  display:flex;
+  justify-content: space-between;
+
+}
+.small_projects_slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-color: var(--accent_color);
+  min-height: 10em;
+  width: 18em;
+  background-image: url(https://cdn130.picsart.com/269868497006201.png?type=webp&to=min&r=640);
+}
+
+#password:hover {
+  background-image: url(images/passwordGenerator.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#daily:hover {
+  background-image: url(images/dailyplanner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.small_projects_slot:hover h3{
+  display: none;
+}
+
+#contactme {
+  padding-bottom: 18%;
+}
+form {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+#button {
+  background-color: var(--accent_color) ;
+  cursor: pointer;
+}
+footer {
+   display: flex;
+   justify-content: space-around;
+   /* align-items: baseline; */
+   /* text-align: center; */
+   /* max-width: 33.3%; */
+   /* margin-left: 33.3%;   */
+}
+
+i {
+  font-size: 3rem;
+}
+
+/* adjustments for tablet and  phone */
+@media only screen and (max-width: 768px) {
+  section p {
+      font-size: 75%; 
+  }
+  section h2 {
+      font-size: large;
+  }
+  section h3 {
+      font-size: small;
+  }
+  #button {
+      font-size: 55%;
+  }
+  .large_project_slot {
+      min-height: 10em;
+      width: 20em;
+  }
+  .small_projects_slot {
+      min-height: 5em;
+      width: 9em;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  nav ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  }
+/*this button appears to have the proper font size in browsers device choser, but on phone it is not working*/
+  #button {
+      font-size:25%;
+  }
+  .large_project_slot {
+      min-height: 5em;
+      width: 10em;
+  }
+  .small_projects_slot {
+      min-height: 2.5em;
+      width: 10em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  section p {
+      font-size: 50%; 
+  }
+  section h2 {
+      font-size: medium;
+  }
+  section h3 {
+      font-size: xx-small;
+  }
+  #button {
+      font-size: 5px;
+  }
+}
