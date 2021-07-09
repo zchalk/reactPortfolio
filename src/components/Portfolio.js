@@ -4,11 +4,15 @@ import Footer from './Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Work from './pages/Work';
+import Home from './pages/Home';
 
 export default function Portfolio() {
-    const [currentPage, setCurrentPage] = useState('About');
+    const [currentPage, setCurrentPage] = useState('Home');
 
     const renderPage = () => {
+        if (currentPage === 'Home') {
+            return <Home />
+        }
         if (currentPage === 'About') {
             return <About />
         }

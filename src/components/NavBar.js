@@ -7,18 +7,18 @@ export default function NavBar({ currentPage, handlePageChange}) {
       <nav>
         <ul>
           <li>
-            <a href="#aboutme"
+            <a 
             onClick={() => handlePageChange('About')}
             className= {currentPage === 'About' ? 'nav-link active' : 'nav-link'}
             >about me</a>
           </li>
           <li>
-            <a href="#mywork"
+            <a 
             onClick={() => handlePageChange('Work')}
             className= {currentPage === 'Work' ? 'nav-link active' : 'nav-link'}>my work</a>
           </li>
           <li>
-            <a href="#contactme"
+            <a 
             onClick={() => handlePageChange('Contact')}
             className= {currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>contact me</a>
           </li>
